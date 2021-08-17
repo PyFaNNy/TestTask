@@ -1,0 +1,39 @@
+﻿@using TestTask.Models
+@model TestTask.Models.Employee
+@{
+    ViewData["Title"] = "Новый Работник";
+}
+<h2>Новый Работник</h2>
+<form method="post" enctype="multipart/form-data" asp-controller="Employee" asp-action="Create">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="LastName">Фамилия</label><br />
+            <input asp-for="LastName" class="form-control" required pattern="^[a-zA-Z]+$"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="FirstName">Имя</label><br />
+            <input asp-for="FirstName" class="form-control" required pattern="^[a-zA-Z]+$"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="MiddleName">Отчество</label><br />
+            <input asp-for="MiddleName" class="form-control" required pattern="^[a-zA-Z]+$"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="Position">Должность</label><br />
+            <select class="form-control" asp-for="Position" asp-items="Html.GetEnumSelectList<Positions>()"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="Company">Компания</label><br />
+            <select class="form-control" asp-for="Company" asp-items="ViewBag.Companies"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmploymentDate">Дата приёма на работу</label><br />
+            <input type="date" asp-for="EmploymentDate" class="form-control" required/>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mt-1">Добавить</button>
+            <a class="btn btn-primary mt-1" asp-controller="Employee" asp-action="Index">Отмена</a>
+        </div>
+    </div>
+</form>

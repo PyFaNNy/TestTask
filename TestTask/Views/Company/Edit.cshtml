@@ -1,0 +1,22 @@
+﻿@model TestTask.Models.Company
+@{
+    ViewData["Title"] = "Редактировании Компании";
+}
+<h2>Редактировании Компании</h2>
+<form method="post" enctype="multipart/form-data" asp-controller="Company" asp-action="Edit" >
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="Name">Наименование</label><br />
+            <input asp-for="Name" class="form-control" value="@ViewBag.Company.Name"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="OrganizationalLegalForm">Организационно-правовая форма</label><br />
+            <input asp-for="OrganizationalLegalForm" class="form-control" value="@ViewBag.Company.OrganizationalLegalForm"/>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mt-1">Редактировать</button>
+            <a class="btn btn-primary mt-1" asp-controller="Company" asp-action="Index">Отмена</a>
+        </div>
+    </div>
+</form>

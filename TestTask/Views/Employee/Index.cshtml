@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Работники";
+}
+<h4>Работники</h4>
+<form id='Employees' method="post">
+    <a class="btn btn-primary m-1" asp-controller="Employee" asp-action="Create">Добавить</a>
+    <button type="submit" class="btn btn-danger m-1" asp-controller="Employee" asp-action="Delete">Удалить</button>
+
+    <table class="table table-striped table-hover">
+        <tr>
+            <th><a asp-controller="Employee" asp-action="Index" asp-route-sortOrder="@ViewBag.IdSort">Идентификатор</a></th>
+            <th><a asp-controller="Employee" asp-action="Index" asp-route-sortOrder="@ViewBag.LastNameSort">Фамилия</a></th>
+            <th><a asp-controller="Employee" asp-action="Index" asp-route-sortOrder="@ViewBag.NameSort">Имя</a></th>
+            <th><a asp-controller="Employee" asp-action="Index" asp-route-sortOrder="@ViewBag.MiddleNameSort">Отчество</a></th>
+            <th><a asp-controller="Employee" asp-action="Index" asp-route-sortOrder="@ViewBag.PositionSort">Должность</a></th>
+            <th><a asp-controller="Employee" asp-action="Index" asp-route-sortOrder="@ViewBag.CompanySort">Компания</a></th>
+            <th><a asp-controller="Employee" asp-action="Index" asp-route-sortOrder="@ViewBag.EmploymentDateSort">Дата приёма на работу</a></th>
+            <th><input type="checkbox" name="cb_all"></th>
+        </tr>
+
+        @if (Model != null)
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td><a asp-controller="Employee" asp-action="Edit" asp-route-Id="@employee.Id">@employee.Id </a></td>
+                    <td>@employee.LastName</td>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.MiddleName</td>
+                    <td>@employee.Position</td>
+                    <td>@employee.Company</td>
+                    <td>@employee.EmploymentDate.ToString("yyyy-MM-dd")</td>
+                    <td><input type="checkbox" class="employee" name="selectedEmployee" value="@employee.Id" /></td>
+                </tr>
+            }
+    </table>
+</form>
+
+<script>
+    var f = document.getElementById('Employees');
+    f.cb_all.onchange = function (e) {
+        var el = e.target || e.srcElement;
+        var qwe = el.form.getElementsByClassName('employee');
+        for (var i = 0; i < qwe.length; i++) {
+            if (el.checked) {
+                qwe[i].checked = true;
+            } else {
+                qwe[i].checked = false;
+            }
+        }
+    }
+</script>
