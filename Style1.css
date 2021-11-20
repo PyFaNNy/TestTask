@@ -1,0 +1,1755 @@
+@charset "UTF-8";
+
+
+body {
+    font-size: 16px;
+    color: #808080;
+    background: #181818;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+    word-break: break-all;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.proposal__header-title {
+    padding-right: 150px;
+    word-break: normal;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.accent-color-text {
+    color: #b0204c;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.underlined {
+    border-bottom: 1px solid black;
+}
+
+.proposal {
+    min-height: 100vh;
+    position: relative;
+    background: url(./assets/images/bg-proposal.png) 50% 60% no-repeat #fff;
+    margin-bottom: 15px;
+    background-size: 35%;
+    padding: 4vh 10% 60px;
+}
+
+    .proposal:last-of-type {
+        margin-bottom: 0;
+    }
+
+.proposal-cover {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15vh 5%;
+    position: relative;
+    min-height: 850px;
+}
+
+.proposal__header {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proposal__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    word-break: break-word;
+}
+
+.proposal__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proposal__header-logo {
+    width: 160px;
+    position: absolute;
+    right: 7.5%;
+    top: 2.7%;
+}
+
+.proposal__footer {
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    padding: 0 30px;
+}
+
+.proposal_ul_li ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 22px;
+}
+
+.proposal_ul_li li {
+    list-style: none;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 28px;
+}
+
+.proposal_ul_li ul li:before {
+    color: #b0204c;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 0 !important;
+    background-color: #b0204c;
+    position: absolute;
+    top: 12px !important;
+    left: 0;
+}
+
+.proposal__content-list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.proposal__lsit-item {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 28px;
+    word-break: break-word;
+}
+
+    .proposal__lsit-item:after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #b0204c;
+        position: absolute;
+        top: 12px;
+        left: 0;
+    }
+
+    .proposal__lsit-item:last-of-type {
+        margin-bottom: 0;
+    }
+
+.proposal__list-item-position:after {
+    content: "-";
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+/* Proposal-cover */
+.proposal-cover__content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.proposal-cover__content-left {
+    display: inline-block;
+    min-height: 70vh;
+    width: 28%;
+    background: #decbb4;
+    text-transform: uppercase;
+    position: relative;
+}
+
+    .proposal-cover__content-left span {
+        transform: rotate(-90deg);
+        display: inline-block;
+        bottom: 38%;
+        position: absolute;
+        color: #fbfdf4;
+        left: -75px;
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+.proposal-cover__content-right {
+    min-height: 70vh;
+    width: 72%;
+    background: #fbfdf4;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 28%;
+}
+
+    .proposal-cover__content-right span {
+        text-align: center;
+        color: #c29a74;
+        margin-right: 14%;
+        font-size: 32px;
+    }
+
+    .proposal-cover__content-right p {
+        width: 97%;
+        background: #c29a74;
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
+        padding-left: 60px;
+        font-style: oblique;
+    }
+
+.proposal-cover .building {
+    position: absolute;
+    width: 28.5%;
+    height: 56vh;
+    left: calc(28% - 68px);
+    object-fit: contain;
+}
+
+/* table-of-content */
+.table-of-content {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    color: #595959;
+}
+
+    .table-of-content .proposal__lsit-item {
+        margin-bottom: 5px;
+    }
+
+/* iNVESTMENT CONTEXT */
+.investment-context .proposal__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 45px 50px;
+    justify-content: space-between;
+}
+
+.investment-context .proposal__content {
+    margin-top: 70px;
+}
+
+    .investment-context .proposal__content ul li {
+        list-style-type: none;
+    }
+
+        .investment-context .proposal__content ul li:before {
+            color: #b0204c;
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #b0204c;
+            position: absolute;
+            top: 5px;
+            left: 0;
+        }
+
+.investment-context .proposal__content-list {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.investment-context .proposal__effective-yeilds {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 16px;
+}
+
+    .investment-context .proposal__effective-yeilds td:first-child {
+        padding-right: 15px;
+        width: 56%;
+    }
+
+.investment-context .proposal__investment-notification {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.investment-context .proposal__content-list {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.proposal__investment-notification {
+    font-size: 12px;
+}
+
+.proposal__effective-yeilds caption {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.proposal__effective-yeilds tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+    .proposal__effective-yeilds tr:last-of-type {
+        margin-bottom: 0;
+    }
+
+.effective-yeilds__date-item {
+    text-decoration: underline;
+}
+
+/* Tactical Asset Allocation */
+.proposal-tactical .proposal__content {
+    align-items: flex-start;
+}
+
+.proposal__content .row {
+    padding-bottom: 10px;
+    padding-top: 20px;
+    border-bottom: 1px dashed #9a244f;
+    width: 100%;
+}
+
+    .proposal__content .row:last-of-type {
+        border-bottom: none;
+    }
+
+.proposal__content .row__title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 60px;
+    color: #595959;
+}
+
+    .proposal__content .row__title:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .proposal__content .row__title.equites:before {
+        background: url(assets/images/equites.jpg) no-repeat;
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+    }
+
+    .proposal__content .row__title.cash:before {
+        background: url(assets/images/cash.jpg) no-repeat;
+        width: 35px;
+        height: 31px;
+        background-size: cover;
+    }
+
+    .proposal__content .row__title.bonds:before {
+        background: url(assets/images/bonds.jpg) no-repeat;
+        width: 40px;
+        height: 30px;
+        background-size: cover;
+    }
+
+    .proposal__content .row__title.alternatives:before {
+        background: url(assets/images/alternatives.jpg) no-repeat;
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+    }
+
+    .proposal__content .row__title span {
+        color: #9a244f;
+    }
+
+.proposal-tactical .proposal__content-list {
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.proposal-tactical .proposal__lsit-item {
+    font-size: 14px;
+}
+
+.proposal-tactical li {
+    font-size: 14px;
+    list-style: none;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 28px;
+}
+
+    .proposal-tactical li:after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #b0204c;
+        position: absolute;
+        top: 5px;
+        left: 0;
+    }
+
+.proposal-tactical ul {
+    font-weight: normal;
+    margin-top: 20px;
+    padding: 0;
+    width: 100%;
+    font-size: 22px;
+}
+
+/* TABLE PREFERENCES */
+.table-preferences .highlight {
+    color: #9a244f;
+}
+
+.table-preferences .proposal__allocation-notification {
+    color: #9a244f;
+    font-size: 12px;
+    left: 25%;
+}
+
+.table-preferences .proposal__content-title {
+    align-self: flex-start;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .table-preferences .proposal__content-title span:nth-of-type(2) {
+        margin-right: 25%;
+    }
+
+.table-preferences .proposal__content table {
+    margin-top: 10px;
+}
+
+    .table-preferences .proposal__content table tr td {
+        padding: 8px;
+    }
+
+        .table-preferences .proposal__content table tr td:first-of-type {
+            width: 13%;
+            text-align: center;
+        }
+
+        .table-preferences .proposal__content table tr td:last-of-type {
+            width: 41%;
+        }
+
+.table-preferences .proposal__content ul {
+    list-style: none;
+}
+
+    .table-preferences .proposal__content ul li {
+        position: relative;
+    }
+
+.table-preferences .proposal__content .like ul li:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(./assets/images/ok.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: -20px;
+    bottom: 6px;
+}
+
+.table-preferences .proposal__content .notlike ul li:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(./assets/images/ok.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: -20px;
+    bottom: 6px;
+    transform: rotate(180deg);
+}
+
+.table-preferences .proposal__content-title span {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.table-preferences table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+    .table-preferences table td {
+        border: 1px solid #dbbb88;
+    }
+
+/* PORTFOLIO ALLOCATION */
+.portfolio-allocation .proposal__header-logo {
+    top: 20px;
+}
+
+.portfolio-allocation .proposal__content {
+    margin-top: 60px;
+}
+
+.proposal__allocation-notification {
+    font-size: 12px;
+    position: absolute;
+    left: 10%;
+    bottom: 20px;
+}
+
+.portfolio-allocation .proposal__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ASSET ALLOCATION */
+.proposal__asset-allocaton .proposal__lsit-item {
+    margin-bottom: 0;
+    display: block;
+}
+
+.proposal__allocation-table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.diagram {
+    width: 240px;
+    height: 240px;
+    margin-left: -40px;
+}
+
+.proposal__allocation-table-title {
+    margin-bottom: 20px;
+}
+
+.proposal__allocation-table-row {
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr 2fr;
+    grid-gap: 0 10px;
+}
+
+.investment-context .proposal__effective-yeilds tbody tr td:last-of-type {
+    width: 46%;
+    min-width: 116px;
+}
+
+.investment-context .proposal__effective-yeilds caption {
+    text-decoration: underline;
+}
+
+.proposal__asset-allocation-table .td_to_right td:not(:first-child) {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.proposal__allocation-table-item--accent {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.proposal__asset-allocation {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.proposal__asset-allocation-table {
+    width: 100%;
+}
+
+    .proposal__asset-allocation-table td {
+        vertical-align: top;
+    }
+
+.asset-allocation__title {
+    width: 100%;
+    padding-left: 80px;
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    word-break: normal;
+}
+
+.portfolio_allocation-div {
+    padding-top: 50px;
+    word-break: break-word;
+}
+
+    .portfolio_allocation-div ul {
+        padding-left: 17px;
+    }
+
+    .portfolio_allocation-div li {
+        position: relative;
+        list-style: none;
+    }
+
+        .portfolio_allocation-div li:after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background-color: #b0204c;
+            position: absolute;
+            top: 8px;
+            left: -15px;
+        }
+
+.asset-allocation__diagram-legend {
+    display: flex;
+    margin: 15px 0 0 0;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+    .asset-allocation__diagram-legend .proposal__lsit-item {
+        margin: 0 10px 0 0;
+        align-items: center;
+    }
+
+        .asset-allocation__diagram-legend .proposal__lsit-item:nth-of-type(1):after {
+            background-color: #b0204e;
+        }
+
+        .asset-allocation__diagram-legend .proposal__lsit-item:nth-of-type(2):after {
+            background-color: #b0204e;
+        }
+
+        .asset-allocation__diagram-legend .proposal__lsit-item:nth-of-type(3):after {
+            background-color: #dd7d9d;
+        }
+
+        .asset-allocation__diagram-legend .proposal__lsit-item:nth-of-type(4):after {
+            background-color: #d1aeb9;
+        }
+
+.asset-allocation__diagram {
+    width: 100%;
+    max-width: 370px;
+    margin-top: -50px;
+}
+
+.asset-allocation__diagram-description {
+    width: 50%;
+}
+
+.asset-allocation__description-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.asset-allocation__diagram-description .proposal__content-list {
+    font-weight: normal;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.asset-allocation__diagram-description .proposal__lsit-item {
+    display: inline-block;
+}
+
+.asset-allocation__diagram-description .accent-color-text {
+    font-weight: bold;
+}
+
+.portfolio-allocation .proposal__allocation-notification {
+    margin-top: auto;
+}
+
+/* PORTFOLIO OVERVIEW */
+.portfolio-overview {
+    padding: 4vh 7% 50px;
+}
+
+    .portfolio-overview .proposal__content {
+        background-color: rgba(234, 234, 234, 40%);
+    }
+
+/* .portfolio-overview .proposal__content {
+  margin-bottom: 10px;
+  margin-bottom: 50px;
+} */
+
+/* .portfolio__overview-table1 .proposal__overview-table-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr repeat(4, 1fr) 2fr;
+  grid-template-columns: auto auto auto 60px 105px 100px 80px 120px;
+  align-items: end;
+  color: #000;
+} */
+
+.portfolio__overview-table1 {
+    margin-bottom: 20px;
+}
+
+    .portfolio__overview-table1.portfolio__overview-table {
+        font-size: 11px;
+        width: 100%;
+        min-width: 1030px;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+.portfolio__overview-table2 {
+    margin-top: 10px;
+}
+
+.summary {
+    width: 100%;
+}
+
+.portfolio__overview-table2 .proposal__overview-table-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 8fr 4fr 4fr 2fr 2fr 2fr 4fr 3fr 5fr;
+    align-items: end;
+    color: #000;
+}
+
+.summary .proposal__overview-table-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 4fr 12fr 2fr 2fr 2fr 4fr 3fr 5fr;
+    align-items: end;
+    color: #000;
+}
+
+.avg_label {
+    text-align: right;
+    padding-right: 20px !important;
+    text-decoration: none !important;
+}
+
+.portfolio__overview-table1 .proposal__overview-table-title {
+    border-bottom: 1px solid #808080;
+    color: #000;
+}
+
+.proposal__overview-table-title {
+    font-weight: bold;
+}
+
+.portfolio__overview-table2 .proposal__overview-table-title td {
+    border-bottom: 1px solid #808080;
+}
+
+    .portfolio__overview-table2 .proposal__overview-table-title td:first-of-type {
+        border-bottom: none;
+    }
+
+.portfolio__overview-table2
+.proposal__overview-table-row--summary
+td:nth-of-type(6) {
+    grid-column: 6/8;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .portfolio__overview-table2
+    .proposal__overview-table-row--summary
+    td:nth-of-type(6) {
+        grid-column: 5/8;
+    }
+}
+
+.portfolio__overview-table2
+.proposal__overview-table-row--summary
+td:nth-of-type(7) {
+    grid-column: 8;
+}
+
+.portfolio__overview-table2
+.proposal__overview-table-row--summary
+td:nth-of-type(8) {
+    grid-column: 9;
+}
+
+.portfolio__overview-table2
+.proposal__overview-table-row--summary
+td:nth-of-type(9) {
+    grid-column: 10;
+}
+
+.portfolio__overview-table2
+.proposal__overview-table-row--summary
+td:nth-of-type(10) {
+    grid-column: 11;
+}
+
+.portfolio__overview-table2
+.proposal__overview-table-row--summary
+td:nth-of-type(11) {
+    grid-column: 12;
+}
+
+.portfolio__overview-table2
+.proposal__overview-table-row--summary
+td:nth-of-type(12) {
+    grid-column: 13;
+}
+
+.portfolio__overview-table {
+    font-size: 12px;
+}
+
+    /* .portfolio__overview-table td {
+  padding-right: 5px;
+} */
+
+    .portfolio__overview-table .accent-color-text {
+        font-weight: bold;
+    }
+
+.proposal__overview-table-row--summary td {
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.portfolio-overview .proposal__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* LAST PAGE */
+.proposal-last-page {
+    background: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .proposal-last-page .proposal__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proposal-last-page .proposal__content-logo {
+        width: 400px;
+        height: 270px;
+        margin: 20px 0 40px 0;
+    }
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.contact-addres {
+    margin: 30px 0 20px 0;
+}
+
+.contact-info__text {
+    margin-bottom: 5px;
+}
+
+    .contact-info__text:last-of-type {
+        margin-bottom: 0;
+    }
+
+.contact-addres__title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* DISCLAIMER */
+.proposal-disclaimer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.proposal__disclaimer-title {
+    margin-bottom: 0;
+}
+
+.proposal__disclaimer-text {
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* IDEA LIST */
+.proposal-idea .proposal__content {
+    align-items: flex-start;
+}
+
+.proposal-idea__subtitle {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.proposal__idea-list {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+.proposal__idea-item {
+    border-top: 2px dashed #ba7e8f;
+    padding: 20px 5px 20px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    width: 160px;
+    height: 100px;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.proposal__idea-section-info {
+    min-width: 200px;
+    width: 200px;
+    margin: 0 20px;
+}
+
+.proposal__idea-main-info {
+    margin-right: 35px;
+    flex-shrink: 0;
+}
+
+.proposal__idea-about {
+    word-break: break-word;
+    min-width: 220px;
+    text-align: justify;
+}
+
+.proposal__idea-main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.idea-title,
+.idea-date {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.idea-calculation {
+    width: 100%;
+    margin-top: 10px;
+    word-break: normal;
+}
+
+    .idea-calculation tr tr {
+        margin-bottom: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0 20px;
+    }
+
+    .idea-calculation tr:last-of-type {
+        margin-bottom: 0;
+    }
+
+rect {
+    fill: none !important;
+}
+
+.table-of-content .proposal__content > ul {
+    width: 100%;
+}
+
+/* MY STYLES */
+.proposal__page-num {
+    position: absolute;
+    right: 10%;
+    bottom: 15px;
+}
+
+/* dynamic table */
+.proposal-dynamic-table {
+    width: 100%;
+    font-size: 11px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+    .proposal-dynamic-table:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .proposal-dynamic-table.portfolio__overview-table1 {
+        margin-bottom: 20px;
+    }
+
+        .proposal-dynamic-table.portfolio__overview-table1 .accent-color-text {
+            font-weight: bold;
+        }
+
+.proposal-dynamic-table__cell--right {
+    text-align: right;
+}
+
+.proposal-dynamic-table__row {
+    width: 100%;
+    min-width: 1030px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.proposal-dynamic-table__row-title {
+    position: relative;
+}
+
+    .proposal-dynamic-table__row-title:after {
+        content: "";
+        width: calc(100% - 42px);
+        height: 1px;
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+.proposal-dynamic-table__cell {
+    font-weight: bold;
+    padding: 2px 0;
+    /* overflow: hidden; */
+    word-break: normal;
+}
+
+    .proposal-dynamic-table__cell:not(:last-child) {
+        padding-right: 10px;
+    }
+
+    .proposal-dynamic-table__cell:last-child {
+        padding-left: 10px;
+    }
+
+.model_portfolio .proposal-dynamic-table__cell:not(:last-child) {
+    padding-right: 0;
+    margin-right: 10px;
+}
+
+.proposal-dynamic-table__cell--number {
+    width: 42px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.proposal-dynamic-table__cell--proposed {
+    width: 65px;
+    text-align: center;
+    /* word-break: break-all; */
+}
+
+.proposal-dynamic-table__cell--current {
+    width: 50px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.proposal-dynamic-table__cell--coupon {
+    width: 52px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--instruments {
+    width: 204px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.proposal-dynamic-table__cell--ISIN {
+    width: 90px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.proposal-dynamic-table__cell--maturity {
+    width: 74px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--YTM {
+    width: 60px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--duration {
+    width: 60px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--LAST_PRICE {
+    width: 60px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--CCY {
+    width: 35px;
+    flex-shrink: 0;
+}
+
+.proposal-dynamic-table__cell--currency {
+    width: 100px;
+    min-width: 100px;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--allocation {
+    width: 80px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--transaction {
+    width: 120px;
+    text-align: right;
+    /* word-break: break-word; */
+}
+
+.proposal-dynamic-table__cell--duration-ISIN {
+    /* width: 200px; */
+    width: calc(10% + 178px);
+    text-align: right;
+}
+
+.proposal-dynamic-table__row--summary
+.proposal-dynamic-table__cell--instruments {
+    width: 85px;
+}
+
+.proposal-dynamic-table__row--summary {
+    font-style: italic;
+}
+
+.proposal-dynamic-table__cell--underlined {
+    text-decoration: underline;
+}
+
+.proposal-dynamic-table__cell--sector {
+    width: 10%;
+    text-align: right;
+    min-width: 90px;
+}
+
+/* .proposal-dynamic-table--equity .proposal-dynamic-table__cell--ISIN {
+  text-align: right;
+} */
+
+.proposal-dynamic-table__cell--yield {
+    width: 70px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--market-cap {
+    width: 90px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.proposal-dynamic-table__cell--market-cap-narrow {
+    width: 60px;
+}
+
+.proposal-dynamic-table__cell--price {
+    width: 60px;
+    text-align: right;
+}
+
+.proposal-dynamic-table--equity .proposal-dynamic-table__cell--duration-ISIN {
+    /* width: calc(10% + 125px); */
+    width: calc(10% + 310px);
+    text-align: right;
+    overflow: visible;
+    min-width: 234px;
+}
+
+.proposal-dynamic-table--equity
+.proposal-dynamic-table__row--summary
+.proposal-dynamic-table__cell--instruments {
+    width: 105px;
+}
+
+.proposal-dynamic-table--alternative
+.proposal-dynamic-table__row--summary
+.proposal-dynamic-table__cell--duration-ISIN {
+    width: 38.1%;
+    overflow: visible;
+}
+
+.proposal-dynamic-table__cell--liquidity {
+    width: 30px;
+    text-align: right;
+    min-width: 30px;
+}
+
+.breaker {
+    word-break: break-word;
+    text-align: justify;
+}
+
+.proposal-cover__content .model {
+    background: #fcfdf7;
+}
+
+.model_proposal_title_description {
+    z-index: 10;
+    width: 72%;
+    text-align: center;
+    /* padding-left: 320px; */
+    padding-left: 28%;
+    padding-right: 120px;
+    padding-top: 20%;
+}
+
+    .model_proposal_title_description p {
+        font-size: xx-large;
+        font-weight: 600;
+        color: #505050;
+    }
+
+.model_portfolio_table {
+    width: 100%;
+}
+
+.model_portfolio .proposal-cover__content {
+    background: #fcfdf7;
+}
+
+.model_portfolio .portfolio__overview-table1 .proposal__overview-table-row {
+    display: grid;
+    grid-template-columns: 50% 188px 1fr;
+    align-items: end;
+    color: #000;
+}
+
+.right {
+    text-align: right;
+}
+
+.model_portfolio .portfolio__overview-table tr td:last-child {
+    text-align: right;
+}
+
+.model_portfolio_table {
+    margin: 0 auto;
+}
+
+.model_portfolio .portfolio__overview-table td {
+    padding-right: 0;
+}
+
+.model_portfolio .proposal-dynamic-table__row-title:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--instruments {
+    width: 280px;
+    min-width: 280px;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--ISIN {
+    width: 140px;
+    min-width: 140px;
+    /* text-align: right; */
+}
+
+.model_portfolio .proposal-dynamic-table__cell--maturity,
+.model_portfolio .proposal-dynamic-table__cell--sector {
+    width: 125px;
+    min-width: 125px;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--YTM,
+.model_portfolio .proposal-dynamic-table__cell--yield {
+    width: 80px;
+    min-width: 80px;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--duration,
+.model_portfolio .proposal-dynamic-table__cell--market-cap {
+    width: 100px;
+    min-width: 100px;
+    text-align: right;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--CCY {
+    width: 25px;
+    min-width: 25px;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--transaction {
+    width: 0;
+    min-width: 0;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--allocation {
+    width: 95px;
+    min-width: 95px;
+}
+
+.model_portfolio .proposal-dynamic-table__cell--duration-ISIN {
+    width: 450px;
+    min-width: 450px;
+    text-align: right;
+}
+
+@media screen and (max-width: 1280px) {
+    .portfolio-overview .proposal__content {
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .model_portfolio .proposal-dynamic-table__cell--duration-ISIN {
+        width: 430px;
+        min-width: 430px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .proposal__asset-allocation-table__tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .proposal__asset-allocation-table .td_to_right {
+        width: 100%;
+    }
+
+        .proposal__asset-allocation-table .td_to_right table {
+            width: 100%;
+        }
+
+    .proposal__asset-allocation-table .td_to_left {
+        margin: 20px auto auto;
+    }
+
+    .asset-allocation__title {
+        padding-left: 0;
+    }
+
+    .diagram {
+        margin-left: -112px;
+    }
+
+    .investment-context .proposal__effective-yeilds {
+        margin-top: 20px;
+        grid-column: 1;
+    }
+
+    .investment-context .proposal__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .investment-context .proposal__effective-yeilds tbody tr td:last-of-type {
+        width: auto;
+        text-align: right;
+    }
+
+    .proposal-dynamic-table,
+    .portfolio__overview-table {
+        width: 100%;
+        margin: auto;
+        padding: 5px 0;
+    }
+
+    .model_portfolio .proposal-dynamic-table__cell--duration-ISIN {
+        width: 440px;
+        min-width: 440px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .proposal-cover__content-right span {
+        margin-right: 5%;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    .proposal-cover,
+    .proposal-cover__content {
+        min-height: 100vh;
+    }
+
+    .container {
+        overflow: hidden;
+    }
+
+    .proposal-cover__content-left span {
+        bottom: 45%;
+        left: -95px;
+        font-size: 16px;
+    }
+
+    .proposal-last-page .proposal__content-logo {
+        width: 70%;
+    }
+
+    .proposal__lsit-item {
+        padding-left: 15px;
+    }
+
+    .proposal__list-item-position:after {
+        top: 0;
+    }
+
+    .propsal-wrapper {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .proposal__asset-allocation {
+        width: 95%;
+        overflow-x: scroll;
+        margin: auto;
+    }
+
+    .portfolio__overview-table {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .proposal__header-logo {
+        width: 100px;
+    }
+
+    .proposal__idea-list {
+        overflow-x: scroll;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .investment-context .proposal__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .proposal__content {
+        word-break: normal;
+    }
+
+    .contact-addres__title {
+        text-align: center;
+    }
+
+    .asset-allocation__title {
+        word-break: normal;
+    }
+
+    .model_proposal_title_description {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+        .model_proposal_title_description p {
+            font-size: x-large;
+        }
+
+    .proposal__header-logo {
+        width: 100px;
+    }
+
+    .proposal__content-list {
+        font-size: 18px;
+    }
+
+    h2.proposal__header-title {
+        font-size: 20px;
+        padding-right: 135px;
+        word-break: normal;
+    }
+
+    .investment-context .proposal__content {
+        grid-template-columns: 15fr 1fr;
+        grid-gap: 40px 70px;
+    }
+
+    .table-of-content {
+        padding-left: 5.5%;
+        padding-right: 5.5%;
+        font-size: 14px;
+    }
+
+    .proposal-cover .building {
+        position: absolute;
+        height: 20vh;
+        width: auto;
+        left: 26%;
+        display: unset;
+        z-index: 7;
+        top: auto;
+        bottom: 25vh;
+    }
+
+    .proposal-cover__content-left span {
+        bottom: 65%;
+        width: 250px;
+        margin: 0 18%;
+    }
+
+    .proposal__list-item-position {
+        margin-right: 5px;
+        min-width: 23%;
+    }
+
+    .proposal__disclaimer-text {
+        font-size: 14px;
+    }
+
+    .proposal__asset-allocation-table {
+        width: auto;
+    }
+
+    .proposal__idea-item {
+        min-width: 700px;
+    }
+
+    .proposal__idea-section-info {
+        min-width: auto;
+        width: auto;
+    }
+
+    .proposal__idea-about {
+        width: auto;
+        word-break: normal;
+    }
+
+    .proposal__page-num {
+        right: 4%;
+    }
+
+    .portfolio_allocation-div {
+        font-size: 14px;
+    }
+
+    .proposal-dynamic-table__row {
+        padding-right: 5px;
+    }
+
+    .proposal-dynamic-table__cell {
+        padding-right: 2px;
+    }
+
+    .proposal__asset-allocation-table td {
+        min-width: 83px;
+        font-size: 13px;
+    }
+
+    .proposal {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .proposal__asset-allocation-table .td_to_right td {
+        min-width: 63px;
+    }
+
+    .investment-context .proposal__effective-yeilds tbody tr td {
+        font-size: 14px;
+    }
+
+    .table-preferences .proposal__content table tr td {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .proposal__lsit-item {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 924px) and (orientation: landscape) {
+    .proposal-cover {
+        min-height: 60vh;
+        padding: 90px 5% 15vh;
+    }
+
+    .proposal-cover__content-left span {
+        bottom: 55%;
+        left: -80px;
+        font-size: 14px;
+    }
+
+    .table-of-content .proposal__lsit-item {
+        margin-right: 0;
+    }
+
+    .proposal__list-item-title {
+        max-width: 70%;
+    }
+
+    .proposal__header-title {
+        word-break: normal;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .proposal__content {
+        word-break: normal;
+    }
+
+    .table-of-content {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+
+    .proposal__asset-allocation-table {
+        padding: 0 20px;
+    }
+
+    .proposal__asset-allocation {
+        width: 100%;
+    }
+
+    .proposal__allocation-table-row .proposal__allocation-table-title {
+        min-width: 350px;
+        word-wrap: normal;
+    }
+
+    .proposal__allocation-table-row {
+        grid-template-columns: 3fr 3fr 2fr 2fr;
+        grid-gap: 0 5px;
+    }
+
+    .accent-color-text .proposal-idea__subtitle {
+        margin: 0;
+    }
+
+    .proposal__idea-list {
+        margin: 5px 0;
+    }
+
+    .proposal__idea-item {
+        padding: 10px 0px;
+    }
+
+    .company-logo {
+        width: 100px;
+    }
+
+    .proposal__idea-section-info {
+        width: auto;
+        margin: 0 10px;
+    }
+
+    .proposal__idea-about {
+        width: auto;
+    }
+
+    .proposal__header-logo {
+        width: 100px;
+    }
+
+    .model_proposal_title_description {
+        padding-right: 20px;
+        padding-left: 160px;
+        padding-top: 40px;
+    }
+
+        .model_proposal_title_description p {
+            font-size: x-large;
+        }
+
+    .proposal__content-list {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .asset-allocation__title {
+        word-break: normal;
+    }
+
+    .proposal__page-num {
+        right: 4%;
+    }
+
+    .portfolio_allocation-div {
+        font-size: 14px;
+    }
+
+    .proposal-dynamic-table__cell {
+        padding-right: 2px;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 610px) {
+    .proposal-cover {
+        padding: 20vh 5%;
+    }
+}
